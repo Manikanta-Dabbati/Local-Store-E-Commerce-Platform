@@ -1,0 +1,33 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+/* Simple transition for cart and modal visibility */
+#cart-sidebar, .modal-container {
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+#cart-sidebar {
+    transition-property: transform;
+}
+.cart-open { transform: translateX(0); }
+.cart-closed { transform: translateX(100%); }
+
+.modal-hidden {
+    opacity: 0;
+    transform: scale(0.95);
+    pointer-events: none;
+}
+.modal-visible {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+}
+
+/* Custom scrollbar for a cleaner look */
+.custom-scrollbar::-webkit-scrollbar { width: 8px; }
+.custom-scrollbar::-webkit-scrollbar-track { background: #f1f1f1; }
+.custom-scrollbar::-webkit-scrollbar-thumb { background: #888; border-radius: 4px; }
+.custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #555; }
+
+/* Star rating display */
+.star-rating { display: inline-flex; color: #facc15; }
+.star-rating-input { cursor: pointer; }
